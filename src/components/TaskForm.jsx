@@ -21,7 +21,7 @@ const TaskForm = ({ addTask }) => {
     >
     <input 
       type="text"
-      className='rounded-lg border border-white border-pink1 px-3 py-1 sm:w-96 hover:border hover:border-pink2 focus:outline-none focus:outline-pink1 '
+      className='rounded-lg border border-white px-3 py-1 sm:w-96 hover:border hover:border-pink2 focus:outline-none focus:outline-pink1 '
       id="task"
       value={task}
       onInput={(e) => setTask(e.target.value)}
