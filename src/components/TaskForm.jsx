@@ -6,7 +6,7 @@ const TaskForm = ({ addTask }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault()
-    addTask({
+    addTask({ //3. The new task with these values is send to 'App.jsx' to update the taskList
       name: task,
       checked: false,
       id: Date.now()
@@ -17,14 +17,14 @@ const TaskForm = ({ addTask }) => {
   return(
     <form
     className="flex justify-center gap-2 mt-12"
-    onSubmit={handleFormSubmit}
+    onSubmit={handleFormSubmit} // 2.The 'handleFormSubmit' function is called when we click the button or we press enter
     >
     <input 
       type="text"
       className='rounded-lg border border-white px-3 py-1 sm:w-96 hover:border hover:border-pink2 focus:outline-none focus:outline-pink1 '
       id="task"
+      onInput={(e) => setTask(e.target.value)} // 1. The value of 'task' is changed using 'setTask' with the new value that the user has introduced in the input
       value={task}
-      onInput={(e) => setTask(e.target.value)}
       required
       maxLength={60}
       placeholder="Add your new task..."

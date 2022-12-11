@@ -7,11 +7,11 @@ const TaskList = ({tasks, triggerTask, title}) => {
   const renderTaskItem = task => <TaskItem key={task.id} task={task} triggerTask={triggerTask}/>
 
   return (
-    <div className='border-2 border-black rounded-lg flex flex-col gap-1 m-16'>
-    <h2 className='flex justify-center text-xl text-black font-semibold'>{title}</h2>
-    <ul className='flex flex-col gap-3 p-4'>
-      {tasks.sort(invertTaskOrder).map(renderTaskItem)}
-    </ul>
+    <div className='w-96 min-h-[13rem] border-2 border-black rounded-lg flex flex-col mt-10 mx-4'>
+      <h2 className='flex justify-center text-xl text-black font-semibold'>{title}</h2>
+      <ul className='flex flex-col gap-3 p-4'>
+       {tasks.sort(invertTaskOrder).map(renderTaskItem)}
+      </ul>
     </div>
   )
 }
