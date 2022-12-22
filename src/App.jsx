@@ -9,6 +9,17 @@ function App() {
     setTasks(() => [...tasks, task])
   }
 
+  const deleteTask = (idTask) => {
+    setTasks(() => [...tasks.filter(task => task.id !== idTask)])
+  }
+
+  const editTask = (taskToEdit) => {
+    const newTasks = tasks.map(task => {
+      return (task.id == taskToEdit.id) ? taskToEdit : task
+    })
+    setTasks(newTasks)
+  }
+
   const triggerTask = (idTask) => {
     const newTasks = tasks.map(task => {
       const taskNeedToChange = task.id == idTask
@@ -27,8 +38,8 @@ function App() {
       </header>
       <TaskForm addTask={addTask}/>
       <div className='flex justify-center flex-wrap'>
-        <TaskList tasks={unfinishedTasks} triggerTask={triggerTask} title="NOT DONE"/>
-        <TaskList className='' tasks={finishedTasks} triggerTask={triggerTask} title="DONE"/>      
+        <TaskList editTask={editTask} tasks={unfinishedTasks} triggerTask={triggerTask} deleteTask={deleteTask} title="NOT DONE"/>
+        <TaskList editTask={editTask} tasks={finishedTasks} triggerTask={triggerTask} deleteTask={deleteTask} title="DONE"/>      
       </div>
     </div>
   )

@@ -1,10 +1,10 @@
 import TaskItem from './TaskItem'
 
-const TaskList = ({tasks, triggerTask, title}) => {
+const TaskList = ({tasks, triggerTask, title, deleteTask, editTask}) => {
 
   if (tasks.length == 0) return null
   const invertTaskOrder = (task1, task2) => task2.id - task1.id
-  const renderTaskItem = task => <TaskItem key={task.id} task={task} triggerTask={triggerTask}/>
+  const renderTaskItem = task => <TaskItem key={task.id} task={task} triggerTask={triggerTask} deleteTask={deleteTask} editTask={editTask}/>
 
   return (
     <div className='w-96 min-h-[13rem] border-2 border-black rounded-lg flex flex-col mt-10 mx-4'>
