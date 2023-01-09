@@ -21,7 +21,7 @@ const TaskForm = ({ addTask }) => {
     >
     <input 
       type="text"
-      className='rounded-lg border border-white px-3 py-1 sm:w-96 hover:border hover:border-pink2 focus:outline-none focus:outline-pink1 '
+      className='rounded-lg border bg-white1 border-white1 px-3 py-1 sm:w-96 hover:border hover:border-pink1 focus:outline-none focus:outline-pink1 '
       id="task"
       onInput={(e) => setTask(e.target.value)} // 1. The value of 'task' is changed using 'setTask' with the new value that the user has introduced in the input
       value={task}
@@ -30,7 +30,7 @@ const TaskForm = ({ addTask }) => {
       placeholder="Add your new task..."
     />
     <button
-      className='text-white border-2 rounded-lg text-lg p-1 border-pink1 bg-pink1 hover:bg-pink2 hover:border-pink2 hover:shadow-lg'
+      className='text-white border-2 rounded-lg text-lg p-1 border-pink1 bg-pink1 hover:bg-pink1 hover:border-pink1 hover:shadow-lg'
       aria-label="Add Task"
       type="submit"
     >

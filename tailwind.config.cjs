@@ -5,12 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'black-title': '#10100a',
+        'black-title': '#373F47',
         'green1': '#6a6d4b',
         'red1':'#97614b',
-        'white': '#ffff',
-        'blue1':'#1a2e32',
-        'pink1':'#c19c80',
+        'white1': '#fbfbfb',
+        'blue1':'#373F47',
+        'pink1':'#c4825a',
         'pink2':'#CDAF99'
       },
       fontFamily: {
